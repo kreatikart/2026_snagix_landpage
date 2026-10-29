@@ -18,7 +18,7 @@ export function App() {
         <FeaturesGrid />
         <DownloadSection release={release} />
       </main>
-      <Footer version={release.version} />
+      <Footer />
     </div>
   );
 }

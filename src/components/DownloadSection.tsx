@@ -11,7 +11,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ release }) => 
     <section id="telecharger" className="py-10 border-t border-slate-200/80 bg-white">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <h2 className="text-center text-xl sm:text-2xl font-bold text-slate-900 mb-6">
-          Télécharger Snagix v{release.version}
+          Télécharger Snagix
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -18,9 +18,6 @@ export const Navbar: React.FC<NavbarProps> = ({ release }) => {
         <a href="#" className="flex items-center gap-2.5">
           <img src="./icon.png" alt="Snagix" className="h-8 w-8 rounded-lg shadow-2xs" />
           <span className="text-base font-bold tracking-tight text-slate-900">Snagix</span>
-          <span className="rounded bg-orange-50 px-1.5 py-0.5 text-[11px] font-semibold text-[#FF6347] border border-orange-200/70">
-            v{release.version}
-          </span>
         </a>
 
         <a

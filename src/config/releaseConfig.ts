@@ -16,7 +16,7 @@ export interface DownloadLinks {
 export const RELEASE_CONFIG = {
   githubOwner: import.meta.env.VITE_GITHUB_OWNER || 'kreatikart',
   githubRepo: import.meta.env.VITE_GITHUB_REPO || '2026_snagix_releases',
-  fallbackVersion: import.meta.env.VITE_FALLBACK_VERSION || '1.2.3',
+  fallbackVersion: import.meta.env.VITE_FALLBACK_VERSION || '1.2.4',
   fallbackDate: '29 octobre 2026',
 
   /**
@@ -29,6 +29,24 @@ export const RELEASE_CONFIG = {
     macDmg: import.meta.env.VITE_MAC_DMG_URL || '',
     macZip: import.meta.env.VITE_MAC_ZIP_URL || '',
     releasesPage: import.meta.env.VITE_RELEASES_PAGE_URL || '',
+  },
+
+  /**
+   * URLs permanentes redirigeant nativement vers la dernière release GitHub (/releases/latest/download/...)
+   * sans nécessiter de numéro de version.
+   */
+  getLatestDownloadUrls(): DownloadLinks {
+    const base = `https://github.com/${this.githubOwner}/${this.githubRepo}/releases/latest/download`;
+
+    return {
+      winSetup: this.customUrls.winSetup || `${base}/Snagix-Setup.exe`,
+      winPortable: this.customUrls.winPortable || `${base}/Snagix-Portable.exe`,
+      macDmg: this.customUrls.macDmg || `${base}/Snagix-arm64.dmg`,
+      macZip: this.customUrls.macZip || `${base}/Snagix-arm64.zip`,
+      releasesPage:
+        this.customUrls.releasesPage ||
+        `https://github.com/${this.githubOwner}/${this.githubRepo}/releases/latest`,
+    };
   },
 
   getDownloadUrls(version: string): DownloadLinks {

@@ -25,7 +25,7 @@ export function useSnagixRelease(): SnagixReleaseState {
   const [version, setVersion] = useState<string>(RELEASE_CONFIG.fallbackVersion);
   const [publishedDate, setPublishedDate] = useState<string>(RELEASE_CONFIG.fallbackDate);
   const [links, setLinks] = useState<DownloadLinks>(() =>
-    RELEASE_CONFIG.getDownloadUrls(RELEASE_CONFIG.fallbackVersion)
+    RELEASE_CONFIG.getLatestDownloadUrls()
   );
 
   useEffect(() => {
