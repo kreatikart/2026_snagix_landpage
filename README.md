@@ -10,9 +10,9 @@ Tous les liens de téléchargement sont centralisés dans un seul fichier :
 👉 **`src/config/releaseConfig.ts`**
 
 Deux modes sont supportés simultanément :
-1. **Automatique via le dépôt public GitHub Releases (`kdavong/snagix-releases`)** :
+1. **Automatique via le dépôt public GitHub Releases (`kreatikart/2026_snagix_releases`)** :
    - Détecte automatiquement le système du visiteur (**Windows** ou **macOS**).
-   - Interroge `https://api.github.com/repos/kdavong/snagix-releases/releases/latest` pour récupérer le dernier tag et les binaires `.exe`, `.dmg` et `.zip` correspondants (avec repli instantané sur `fallbackVersion`).
+   - Interroge `https://api.github.com/repos/kreatikart/2026_snagix_releases/releases/latest` pour récupérer le dernier tag et les binaires `.exe`, `.dmg` et `.zip` correspondants (avec repli instantané sur `fallbackVersion`).
 2. **Surcharge manuelle par URL directe (`customUrls` ou variables `.env`)** :
    - Renseignez directement `customUrls.winSetup`, `customUrls.winPortable`, `customUrls.macDmg` ou `customUrls.macZip` dans `src/config/releaseConfig.ts` (ou via `VITE_WIN_SETUP_URL`, etc.) si vous hébergez les exécutables sur un autre domaine ou dépôt.
 

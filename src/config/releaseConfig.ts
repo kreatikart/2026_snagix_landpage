@@ -9,13 +9,13 @@ export interface DownloadLinks {
 /**
  * Configuration centralisée des téléchargements Snagix.
  *
- * Par défaut, la landing page cible le dépôt public `kdavong/snagix-releases`.
+ * Par défaut, la landing page cible le dépôt public `kreatikart/2026_snagix_releases`.
  * Vous pouvez modifier `githubOwner` / `githubRepo` ou renseigner directement
  * `customUrls` si vos binaires sont hébergés sur une URL personnalisée.
  */
 export const RELEASE_CONFIG = {
-  githubOwner: import.meta.env.VITE_GITHUB_OWNER || 'kdavong',
-  githubRepo: import.meta.env.VITE_GITHUB_REPO || 'snagix-releases',
+  githubOwner: import.meta.env.VITE_GITHUB_OWNER || 'kreatikart',
+  githubRepo: import.meta.env.VITE_GITHUB_REPO || '2026_snagix_releases',
   fallbackVersion: import.meta.env.VITE_FALLBACK_VERSION || '1.2.3',
   fallbackDate: '29 octobre 2026',
 
