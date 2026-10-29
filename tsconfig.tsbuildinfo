@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/downloadsection.tsx","./src/components/featuresgrid.tsx","./src/components/footer.tsx","./src/components/herodownload.tsx","./src/components/navbar.tsx","./src/components/workflowstory.tsx","./src/config/releaseconfig.ts","./src/hooks/usesnagixrelease.ts"],"version":"5.9.3"}
