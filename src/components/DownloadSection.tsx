@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Monitor, Apple, Package } from 'lucide-react';
+import { Download, Monitor, Apple, Package, ExternalLink } from 'lucide-react';
 import { SnagixReleaseState } from '../hooks/useSnagixRelease';
 
 interface DownloadSectionProps {
@@ -92,6 +92,18 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ release }) => 
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="mt-5 text-center">
+          <a
+            href={release.links.releasesPage}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-[#FF6347] transition-colors"
+          >
+            <span>Voir les notes de version et toutes les archives sur GitHub Releases</span>
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
         </div>
       </div>
     </section>
